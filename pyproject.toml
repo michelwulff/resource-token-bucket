@@ -1,0 +1,14 @@
+[project]
+name = "resource-token-bucket"
+version = "0.1.0"
+description = "A token bucket that refills at a fixed rate and consumes tokens on demand, returning booleans for flow control under load."
+requires-python = ">=3.10"
+dependencies = []
+readme = "README.md"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
