@@ -54,3 +54,10 @@ The common need: shed load when a downstream resource is saturated, without queu
 - `TokenBucket.consume(n=1.0) -> bool` — attempt to deduct `n` tokens.
 - `TokenBucket.tokens() -> float` — current token count after refill (read-only).
 - `TokenBucket.rate` / `TokenBucket.capacity` — the configured values.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
