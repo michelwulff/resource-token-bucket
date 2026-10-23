@@ -1,6 +1,6 @@
 [project]
 name = "resource-token-bucket"
-version = "0.1.1"
+version = "0.1.2"
 description = "A token bucket that refills at a fixed rate and consumes tokens on demand, returning booleans for flow control under load."
 requires-python = ">=3.10"
 dependencies = []
